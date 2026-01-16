@@ -15,6 +15,15 @@ mongoose.connect(process.env.MONGO_URI)
 // Schema & Model
 const User = mongoose.model('User', { name: String, email: String });
 
+
+//
+
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully");
+});
+
+
+
 // API Route
 app.post('/api/save', async (req, res) => {
   try {
